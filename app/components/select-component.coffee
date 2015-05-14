@@ -1,4 +1,5 @@
 `import Ember from 'ember'`
+`import ListView from 'ember-list-view'`
 `import BodyEventListener from '../mixins/body-event-listener'`
 `import ResizeHandlerMixin from '../mixins/resize-handler'`
 `import SelectOptionView from '../views/select-option'`
@@ -143,7 +144,7 @@ Ember.Component.extend BodyEventListener, ResizeHandlerMixin,
 
   # This is a hack. Ember.ListView doesn't handle case when total height
   # is less than height properly
-  listView: Ember.ListView.extend
+  listView: ListView.extend
     style: Ember.computed( ->
       height = Math.min @get('height'), @get('totalHeight')
       "height: #{height}px"

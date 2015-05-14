@@ -1,7 +1,9 @@
 `import Ember from 'ember'`
+`import ListView from 'ember-list-view'`
+`import ListItemView from 'ember-list-view/list-item-view'`
 
 # The view for each item in the select.
-SelectOptionView = Ember.ListItemView.extend
+SelectOptionView = ListItemView.extend
   tagName: 'li'
   templateName: 'select-item'
   layoutName: 'select-item-layout'
